@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PlaytimeOblique.ttf">
+            <string>PlaytimeWithHotToddiesOblique</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DigitalLeashChild" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ParentID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7nx-fO-ye9">
+                                <rect key="frame" x="100" y="120" width="175" height="35"/>
+                                <color key="backgroundColor" red="0.49803921568627452" green="0.74654533037173199" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Seo-lA-4VS"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLB-am-1G6">
+                                <rect key="frame" x="110" y="319.5" width="155" height="28"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="PlaytimeWithHotToddiesOblique" family="PlaytimeWithHotToddiesOblique" pointSize="17"/>
+                                <state key="normal" title="Report Location">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="reportLocationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7oe-OQ-wmg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49803921568627452" green="0.70588235294117641" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7nx-fO-ye9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="6Ht-Rg-ZFR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rLB-am-1G6" secondAttribute="trailing" constant="110" id="83L-oc-DhQ"/>
+                            <constraint firstItem="rLB-am-1G6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="BqX-qT-QvE"/>
+                            <constraint firstItem="rLB-am-1G6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q5N-DH-RvD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7nx-fO-ye9" secondAttribute="trailing" constant="100" id="diK-ai-xiJ"/>
+                            <constraint firstItem="7nx-fO-ye9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fHV-lr-nNY"/>
+                            <constraint firstItem="7nx-fO-ye9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="sqI-yi-YKN"/>
+                            <constraint firstItem="rLB-am-1G6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tuj-Ga-eBk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="P3v-3d-6lN"/>
+                    <connections>
+                        <outlet property="parentIDTextField" destination="7nx-fO-ye9" id="hgp-Ae-9NH"/>
+                        <outlet property="parentTextField" destination="7nx-fO-ye9" id="gaE-nF-2I9"/>
+                        <outlet property="reportLocationButton" destination="rLB-am-1G6" id="Wkj-nG-CqR"/>
+                        <segue destination="b2f-jh-V3d" kind="show" identifier="childViewSegue" id="lMA-yI-e26"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340" y="26"/>
+        </scene>
+        <!--Child Location View Controller-->
+        <scene sceneID="pqk-uQ-Wb9">
+            <objects>
+                <viewController id="b2f-jh-V3d" customClass="ChildLocationViewController" customModule="DigitalLeashChild" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UTg-w6-lRa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your location is now being reported" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlb-Y1-xh4">
+                                <rect key="frame" x="60" y="150" width="255" height="15.5"/>
+                                <fontDescription key="fontDescription" name="PlaytimeWithHotToddiesOblique" family="PlaytimeWithHotToddiesOblique" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgq-Tf-7fP">
+                                <rect key="frame" x="100" y="319.5" width="175" height="28"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="PlaytimeWithHotToddiesOblique" family="PlaytimeWithHotToddiesOblique" pointSize="17"/>
+                                <state key="normal" title="DONE"/>
+                                <connections>
+                                    <action selector="doneButtonTapped:" destination="b2f-jh-V3d" eventType="touchUpInside" id="x2h-yv-Axi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49803921569999998" green="0.70588235290000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qlb-Y1-xh4" firstAttribute="leading" secondItem="oZz-0N-NAL" secondAttribute="leading" constant="60" id="0Zi-kN-zsr"/>
+                            <constraint firstItem="Fgq-Tf-7fP" firstAttribute="centerX" secondItem="UTg-w6-lRa" secondAttribute="centerX" id="5FL-Gp-0ij"/>
+                            <constraint firstItem="oZz-0N-NAL" firstAttribute="trailing" secondItem="Fgq-Tf-7fP" secondAttribute="trailing" constant="100" id="FsG-9s-DGm"/>
+                            <constraint firstItem="oZz-0N-NAL" firstAttribute="trailing" secondItem="qlb-Y1-xh4" secondAttribute="trailing" constant="60" id="aff-w9-Pf5"/>
+                            <constraint firstItem="Fgq-Tf-7fP" firstAttribute="centerY" secondItem="UTg-w6-lRa" secondAttribute="centerY" id="mL9-1R-DqN"/>
+                            <constraint firstItem="Fgq-Tf-7fP" firstAttribute="leading" secondItem="oZz-0N-NAL" secondAttribute="leading" constant="100" id="vMN-WM-55e"/>
+                            <constraint firstItem="qlb-Y1-xh4" firstAttribute="top" secondItem="oZz-0N-NAL" secondAttribute="top" constant="130" id="yA0-1e-tfF"/>
+                            <constraint firstItem="qlb-Y1-xh4" firstAttribute="centerX" secondItem="UTg-w6-lRa" secondAttribute="centerX" id="zsQ-hL-KgA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oZz-0N-NAL"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="Fgq-Tf-7fP" id="oh5-UL-E1U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIy-cx-0Ap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504.80000000000001" y="39.130434782608695"/>
+        </scene>
+    </scenes>
+</document>

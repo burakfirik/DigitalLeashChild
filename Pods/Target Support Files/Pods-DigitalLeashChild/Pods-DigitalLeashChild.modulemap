@@ -1,0 +1,6 @@
+framework module Pods_DigitalLeashChild {
+  umbrella header "Pods-DigitalLeashChild-umbrella.h"
+
+  export *
+  module * { export * }
+}
