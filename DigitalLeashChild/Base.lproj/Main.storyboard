@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ParentID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7nx-fO-ye9">
-                                <rect key="frame" x="100" y="120" width="175" height="35"/>
+                                <rect key="frame" x="149.5" y="120" width="76.5" height="35"/>
                                 <color key="backgroundColor" red="0.49803921568627452" green="0.74654533037173199" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Seo-lA-4VS"/>
@@ -34,7 +34,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLB-am-1G6">
-                                <rect key="frame" x="110" y="319.5" width="155" height="28"/>
+                                <rect key="frame" x="134.5" y="319.5" width="106" height="28"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="PlaytimeWithHotToddiesOblique" family="PlaytimeWithHotToddiesOblique" pointSize="17"/>
                                 <state key="normal" title="Report Location">
@@ -48,12 +48,12 @@
                         <color key="backgroundColor" red="0.49803921568627452" green="0.70588235294117641" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7nx-fO-ye9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="6Ht-Rg-ZFR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rLB-am-1G6" secondAttribute="trailing" constant="110" id="83L-oc-DhQ"/>
-                            <constraint firstItem="rLB-am-1G6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="BqX-qT-QvE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rLB-am-1G6" secondAttribute="trailing" id="83L-oc-DhQ"/>
+                            <constraint firstItem="rLB-am-1G6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BqX-qT-QvE"/>
                             <constraint firstItem="rLB-am-1G6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q5N-DH-RvD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7nx-fO-ye9" secondAttribute="trailing" constant="100" id="diK-ai-xiJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7nx-fO-ye9" secondAttribute="trailing" id="diK-ai-xiJ"/>
                             <constraint firstItem="7nx-fO-ye9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fHV-lr-nNY"/>
-                            <constraint firstItem="7nx-fO-ye9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="sqI-yi-YKN"/>
+                            <constraint firstItem="7nx-fO-ye9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sqI-yi-YKN"/>
                             <constraint firstItem="rLB-am-1G6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tuj-Ga-eBk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
